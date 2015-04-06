@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -d build ]; then
+    rm -rf build
+fi 
+
+mkdir build
+cd build
+cmake -DCMAKE_CXX_COMPILER=arm-linux-gnueabihf-g++ -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc -DCROSS_COMPILE=ON -DARM_LIBS_ROOT=/home/user/ros_catkin_ws/exteranl_src/rpi_libs ..
+cd ..

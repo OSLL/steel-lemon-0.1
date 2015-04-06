@@ -1,0 +1,20 @@
+<package>
+  <description brief="test_robot">
+
+     test_robot
+
+  </description>
+  <author>Kirill Luchikhin</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>https://dev.osll.ru/projects/robotics/wiki</url>
+  <depend package="std_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="cv_bridge"/>
+  <depend package="tf"/>
+</package>
+
+

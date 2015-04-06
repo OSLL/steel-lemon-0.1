@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if (( $# == 1 )); then
+	dest_addr=$1
+else
+	dest_addr=pi@192.168.1.35
+fi
+
+if [ ! -d "bin" ]; then
+	./cross_compile_init
+fi
+
+cd build
+make
+cd ..
+
+echo "Uploading..."
+
+scp -r ./bin $dest_addr:/home/pi/ros/test_robot

@@ -1,0 +1,5 @@
+<!--xml-->
+<launch>
+  <node name="motor_ctrl" pkg="test_robot" type="motor_ctrl_node" output="screen"/>
+  <node name="sonar" pkg="test_robot" type="sonar_node" output="screen"/>
+</launch>

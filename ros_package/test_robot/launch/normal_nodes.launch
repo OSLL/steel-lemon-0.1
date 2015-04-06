@@ -1,0 +1,28 @@
+<!--xml-->
+<launch>
+  <node name="camera" pkg="test_robot" type="camera_node" output="screen" >
+    <param name="device" value="0"/>
+  </node>
+  
+  <node name="detector" pkg="test_robot" type="detector_node" output="screen" >
+    <param name="camera_params" value="$(find test_robot)/config/calib.xml"/>
+    <param name="real_size" value="90"/>
+    <param name="focal_length" value="693"/>
+
+    <param name="log_path" value="/home/pi/ros/test_robot/log"/>
+    <param name="canny_threshold" value="100"/>
+    <param name="sat_threshold" value="100"/>
+    <param name="dist_threshold" value="240"/>
+    <param name="max_lifetime" value="10"/>
+    <param name="color_ratio" value="25"/>
+
+    <param name="corner_block_size" value="9"/>
+    <param name="corner_aperture_size" value="3"/>
+    <param name="corner_k" value="4"/>
+    <param name="corner_threshold" value="175"/>  
+  </node>
+  <!--
+  <node name="motor_ctrl" pkg="test_robot" type="motor_ctrl_node" output="screen" launch-prefix="sudo" />
+  <node name="sonar" pkg="test_robot" type="sonar_node" output="screen" launch-prefix="sudo" />
+  -->
+</launch>

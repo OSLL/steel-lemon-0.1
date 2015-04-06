@@ -1,0 +1,5 @@
+geometry_msgs/Pose2D start
+geometry_msgs/Pose2D finish
+bool sync
+---
+bool result
